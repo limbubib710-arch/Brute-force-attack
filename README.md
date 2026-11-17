@@ -59,6 +59,8 @@ Unauthorized use against systems you do not own is illegal.
 
 ```bash
 pkg update && pkg install python
-mkdir ~/USB_PASSWORD_LAB && cd ~/USB_PASSWORD_LAB
+git clonehttps://github.com/limbubib710-arch/Brute-force-attack.git
+cd Brute-force-attack
+ls
 # copy or paste usb_password_lab.py here
 python usb_password_lab.py
