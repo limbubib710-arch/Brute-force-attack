@@ -62,5 +62,4 @@ pkg update && pkg install python
 git clonehttps://github.com/limbubib710-arch/Brute-force-attack.git
 cd Brute-force-attack
 ls
-# copy or paste usb_password_lab.py here
 python USB debugging.py
