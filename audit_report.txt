@@ -1,1 +1,35 @@
+USB PASSWORD LAB X ULTIMATE — AUDIT REPORT
+Generated: 2026-11-17T14:32:07
+============================================================
 
+Password: ******** (len=8)
+  Entropy : 46.6 bits
+  Strength: WEAK
+  Weak    : YES
+  Issues  : missing symbols, low character diversity
+
+Password: ******** (len=10)
+  Entropy : 55.7 bits
+  Strength: WEAK
+  Weak    : YES
+  Issues  : missing symbols
+
+Password: ********** (len=10)
+  Entropy : 65.5 bits
+  Strength: MEDIUM
+  Weak    : no
+  Issues  : none
+
+Password: ************ (len=12)
+  Entropy : 77.6 bits
+  Strength: MEDIUM
+  Weak    : no
+  Issues  : none
+
+Password: ************ (len=12)
+  Entropy : 85.6 bits
+  Strength: STRONG
+  Weak    : no
+  Issues  : none
+
+NOTE: offline analysis only. No live device or account was contacted.
