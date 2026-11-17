@@ -1,0 +1,20 @@
+# ============================================================
+#  USB PASSWORD LAB X — ULTIMATE  (v2.0.0)
+#  requirements.txt
+# ============================================================
+#  NO third-party dependencies are required.
+#  The application uses ONLY the Python 3 standard library:
+#
+#    os, sys, time, json, math, string, random, shutil,
+#    hashlib, platform, threading, subprocess, itertools, datetime
+#
+#  => Fully offline. No API keys. No paid APIs. No pip installs.
+# ============================================================
+#
+#  Termux users (optional, for READ-ONLY USB enumeration only):
+#    pkg install python
+#    pkg install termux-api      # requires the Termux:API app from F-Droid
+#    pkg install libusb
+#
+#  Pydroid 3 users: no packages needed — just press Run.
+# ============================================================
