@@ -1,1 +1,38 @@
+python3 -c "
+import string, random
+random.seed(2026)                       # deterministic output
+out, seen = [], set()
+bases = ['pass','word','admin','usb','lock','key','user','secure',
+         'hack','test','lab','root','gate','code','safe']
+syms = '!@#\$%&*?-_+='
+digits = string.digits
 
+def add(w):
+    if w not in seen and len(w) >= 4:
+        seen.add(w); out.append(w)
+
+# --- numeric section: PINs, years, phone-style ---
+for i in range(250):                     add(f'{i:04d}')
+for y in range(1970, 2031):              add(str(y))
+for i in range(2000000, 2000150):        add(str(i))
+
+# --- base words + digits (lower / UPPER / Capitalized / leetswap) ---
+for b in bases:
+    for n in range(60):                  add(b + f'{n:02d}')
+    add(b.upper());  add(b.upper() + '123')
+    add(b.capitalize() + '2024');  add(b.capitalize() + '99')
+    add(''.join(ch.upper() if i % 2 else ch for i, ch in enumerate(b)) + '7')
+    for s in syms:                       add(b + s + '123')
+    for s in ('!', '@', '#'):            add('!' + b + s + '99')
+
+# --- random alphanumeric + symbol suffix to top up past 1000 ---
+pool = string.ascii_letters + digits
+while len(out) < 1024:
+    w = ''.join(random.choice(pool) for _ in range(random.randint(6, 12)))
+    if random.random() < 0.3: w += random.choice(syms)
+    add(w)
+
+with open('wordlist.txt', 'w') as f:
+    f.write('\n'.join(out) + '\n')
+print(f'Done: wrote {len(out)} unique entries -> wordlist.txt')
+"
